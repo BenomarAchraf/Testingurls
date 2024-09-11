@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img id="test" src="" alt="test">
+    </div>
+
+    <script>
+ /* function updateUrl() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    // Update the URL with query parameters
+    const newUrl = `${window.location.pathname}?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+  }
+
+   "https://firebasestorage.googleapis.com/v0/b/photobooth-466c7.appspot.com/o/images%2Fimage.png?alt=media&token=aeebaa40-cdc6-40aa-b76a-19f67805b3b2"
+    "https://firebasestorage.googleapis.com/v0/b/photobooth-466c7.appspot.com/o/images%2Fachraf564.jpg?alt=media&token=5464598f-75c0-4b49-b2b3-7fe6f3fad619"
+
+  // On page load, parse the URL and populate the form
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const email = urlParams.get('email');
+
+    if (name) {
+       decodeURIComponent(name);
+    }
+    if (email) {
+      document.getElementById('email').value = decodeURIComponent(email);
+    }
+  });*/
+
+ 
+      
+  function update(){
+    const uripart1 = "https://firebasestorage.googleapis.com/v0/b/photobooth-466c7.appspot.com/o/images%2F";
+    const uripart2 = "?alt=media&token=";
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const token = urlParams.get('token');
+        console.log(uripart1+name+uripart2+token);
+        document.getElementById('test').src=uripart1+name+uripart2+token;
+  } 
+
+  update();
+
+</script>
+</body>
+</html>
